@@ -70,7 +70,7 @@ html.dark-mode {
     .menu.pagenav.pagenav-list + .navlist,
     .menu.pagenav.pagenav-list.expanded + .navlist {
         background-color: transparent;
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
     }
 
     #layout-content {
@@ -92,7 +92,7 @@ html.dark-mode {
 
     #layout-menu {
         background: @color-discord-tertiary;
-        border-right: 1px solid @color-dark-border;
+        border-right: 1px solid @color-discord-border;
 
         .popover-header,
         .special-buttons {
@@ -103,7 +103,7 @@ html.dark-mode {
             border-left: 0;
 
             .popover-header {
-                border-bottom: 1px solid @color-dark-border;
+                border-bottom: 1px solid @color-discord-border;
             }
         }
 
@@ -118,7 +118,7 @@ html.dark-mode {
 
     .searchbar {
         background-color: @color-discord-tertiary;
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
 
         form:before,
         a,
@@ -151,7 +151,6 @@ html.dark-mode {
         background-color: @color-dark-message-error;
     }
 
-    .ui.alert.boxwarning,
     #messagestack .alert-warning {
         background-color: @color-dark-message-warning;
     }
@@ -167,12 +166,21 @@ html.dark-mode {
 
     .ui.alert.boxinformation,
     .ui.alert.boxerror,
-    .ui.alert.boxwarning,
     .ui.alert.boxconfirmation {
-        color: @color-dark-font;
+        color: #FFF;
         i.icon:before {
             color: @color-dark-font;
         }
+    }
+
+    .ui.alert.boxwarning {
+        color: #FFF;
+        background-color: @color-discord-warning-background;
+        border-color: @color-discord-warning-foreground;
+        i.icon:before {
+            color: @color-discord-warning-foreground;
+        }
+        border-radius: 5px !important;
     }
 
     .ui.alert a:not(.btn) {
@@ -232,7 +240,7 @@ html.dark-mode {
     &.layout-small,
     &.layout-phone {
         .popover {
-            border-left: 1px solid @color-dark-border;
+            border-left: 1px solid @color-discord-border;
 
             .menu .dropbutton a.dropdown {
                 background: transparent;
@@ -245,7 +253,7 @@ html.dark-mode {
 
         .popover-header {
             background: @color-dark-popover-background;
-            border-bottom: 1px solid @color-dark-border;
+            border-bottom: 1px solid @color-discord-border;
             color: unset;
         }
 
@@ -346,7 +354,7 @@ html.dark-mode {
                 td.subject {
                     a,
                     span.msgicon.status {
-                        color: @color-dark-list-selected;
+                        color: @color-discord-list-selected-text;
                     }
                 }
             }
@@ -374,12 +382,17 @@ html.dark-mode {
         span.attachment span {
             color: @color-dark-hint;
         }
+
+        .message:hover {
+            background-color: @color-discord-list-hover;
+            transition-duration: 150ms;
+        }
     }
 
     .folderlist li.mailbox .unreadcount {
-        background-color: @color-dark-list-badge-background;
-        color: @color-dark-list-badge;
-        font-weight: normal;
+        background-color: @color-discord-notification;
+        color: white;
+        font-weight: lighter;
     }
 
     .attachmentslist {
@@ -406,7 +419,7 @@ html.dark-mode {
 
     .btn {
         color: @color-dark-font;
-
+        border: none !important;
         &:focus,
         &:hover {
             color: @color-dark-btn;
@@ -418,20 +431,20 @@ html.dark-mode {
     }
 
     .btn-primary {
-        background-color: @color-dark-btn-primary-background;
+        background-color: @color-discord-btn-primary;
         color: @color-dark-btn;
 
         &:hover:not(:disabled) {
-            background-color: lighten(@color-dark-btn-primary-background, 5%);
+            background-color: @color-discord-btn-primary-hover;
         }
     }
 
     .btn-secondary {
-        background-color: @color-dark-btn-secondary-background;
+        background-color: @color-discord-tertiary;
         color: @color-dark-btn;
 
         &:hover:not(:disabled) {
-            background-color: lighten(@color-dark-btn-secondary-background, 5%);
+            background-color: lighten(@color-discord-tertiary, 5%);
         }
     }
 
@@ -451,7 +464,7 @@ html.dark-mode {
 
     .custom-file-label,
     .form-control {
-        background-color: @color-dark-input-background;
+        background-color: @color-discord-tertiary;
         color: @color-dark-input;
 
         &:not(.is-invalid) {
@@ -459,7 +472,7 @@ html.dark-mode {
         }
 
         &:focus {
-            background-color: @color-dark-input-background-focus;
+            background-color: @color-discord-tertiary;
 
             &:not(.is-invalid) {
                 color: @color-dark-input-focus !important;
@@ -480,7 +493,7 @@ html.dark-mode {
 
     .custom-switch {
         .custom-control-label::before {
-            background-color: @color-dark-checkbox;
+            background-color: @color-discord-border;
         }
 
         .custom-control-label::after {
@@ -493,7 +506,7 @@ html.dark-mode {
 
         .custom-control-input:checked {
             & ~ .custom-control-label::before {
-                background-color: @color-dark-checkbox-checked;
+                background-color: @color-discord-border;
             }
 
             & ~ .custom-control-label::after {
@@ -517,7 +530,7 @@ html.dark-mode {
 
     .input-group-text {
         color: @color-dark-input;
-        background-color: @color-dark-input-addon-background;
+        background-color: @color-discord-secondary-alt;
         border-color: @color-discord-border;
     }
 
@@ -550,7 +563,7 @@ html.dark-mode {
     }
 
     .file-upload {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
 
         &:after {
             mix-blend-mode: soft-light;
@@ -726,7 +739,7 @@ html.dark-mode {
         .tox-dialog__footer,
         .tox-dialog__title {
             color: @color-dark-font;
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
             background-color: @color-dark-background;
         }
 
@@ -761,15 +774,15 @@ html.dark-mode {
             }
 
             &.tox-button--secondary {
-                background-color: @color-dark-btn-secondary-background;
+                background-color: @color-discord-tertiary;
                 color: @color-dark-btn;
 
                 &:focus:not(:disabled) {
-                    background-color: @color-dark-btn-secondary-background;
+                    background-color: @color-discord-tertiary;
                 }
 
                 &:hover:not(:disabled) {
-                    background-color: lighten(@color-dark-btn-secondary-background, 5%);
+                    background-color: lighten(@color-discord-tertiary, 5%);
                 }
 
             }
@@ -829,7 +842,7 @@ html.dark-mode {
 
     .message-part,
     .message-htmlpart {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
 
         blockquote {
             background-color: @color-dark-background;
@@ -887,7 +900,7 @@ html.dark-mode {
 
     // this is when image thumbnails are enabled
     p.image-attachment {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
         background-color: @color-dark-list-selected-background;
 
         span {
@@ -899,7 +912,7 @@ html.dark-mode {
     fieldset.image-attachment {
         legend {
             color: @color-dark-hint;
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
         }
     }
 
@@ -913,7 +926,7 @@ html.dark-mode {
     // ----------------------------------
 
     .ui-widget {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
     }
 
     .ui-widget-overlay {
@@ -927,7 +940,7 @@ html.dark-mode {
 
     .ui-dialog {
         .ui-dialog-titlebar {
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
         }
 
         .ui-dialog-title,
@@ -937,7 +950,7 @@ html.dark-mode {
         }
 
         .ui-dialog-buttonpane {
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
 
             .ui-dialog-buttonset {
                 a.btn-link {
@@ -960,7 +973,7 @@ html.dark-mode {
 
     .ui-datepicker {
         .ui-datepicker-header {
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
         }
 
         th {
@@ -1004,7 +1017,7 @@ html.dark-mode {
 
     .minicolors-panel {
         box-shadow: none;
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
         background: @color-dark-popover-background;
     }
 
@@ -1065,23 +1078,23 @@ html.dark-mode {
     }
 
     .nav-tabs {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
 
         .nav-link {
             color: @color-dark-font;
             border-color: transparent;
-            border-bottom-color: @color-dark-border;
+            border-bottom-color: @color-discord-border;
         }
 
         .nav-link:hover {
             background: @color-dark-background;
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
             color: @color-dark-font;
         }
 
         .nav-link.active {
             background: @color-dark-background;
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
             border-bottom-color: transparent;
             color: #fff;
         }
@@ -1093,22 +1106,22 @@ html.dark-mode {
         td,
         th,
         thead th {
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
         }
     }
 
     .table-widget {
-        border-color: @color-dark-border;
+        border-color: @color-discord-border;
 
         & > .footer {
-            border-color: @color-dark-border;
+            border-color: @color-discord-border;
         }
 
         // Options table is a table with first column for identifier/description
         // and other columns for a state flag. E.g. ACL table
         table.options-table {
             tr:last-child td {
-                border-color: @color-dark-border;
+                border-color: @color-discord-border;
             }
 
             tr.selected td {
@@ -1129,8 +1142,8 @@ html.dark-mode {
         color: unset;
 
         .bar {
-            border-color: @color-dark-border;
-            background-color: @color-dark-border;
+            border-color: @color-discord-border;
+            background-color: @color-discord-border;
         }
     }
 
