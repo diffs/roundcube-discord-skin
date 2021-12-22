@@ -1,4 +1,4 @@
-Roundcube Webmail Skin "Elastic"
+Roundcube Webmail Skin "Elastic" - Discord Skin Edit
 ================================
 
 This skin package contains a theme for the Roundcube Webmail
@@ -8,8 +8,13 @@ the terms described in the LICENSE section.
 For information about building or modifying Roundcube skins please visit
 https://github.com/roundcube/roundcubemail/wiki/Skins
 
+PREVIEW
+------
+![image](https://user-images.githubusercontent.com/50718889/147038160-24180aac-8621-4139-908d-2de83cf37065.png)
+![image](https://user-images.githubusercontent.com/50718889/147038194-ef0228d1-c18f-4a49-a3a6-db6d7629f47a.png)
 
 LICENSE
+
 -------
 
 The contents of this folder are subject to the Creative Commons
