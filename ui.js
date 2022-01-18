@@ -17,7 +17,7 @@ function rcube_elastic_ui()
 {
     var prefs, ref = this,
         mode = 'normal', // one of: large, normal, small, phone
-        color_mode = 'light', // 'light' or 'dark'
+        color_mode = 'dark', // 'light' or 'dark'
         touch = false,
         ios = false,
         popups_close_lock,
