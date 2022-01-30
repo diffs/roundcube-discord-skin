@@ -30,24 +30,23 @@ html.dark-mode {
             scrollbar-width: @scrollbar-dark-width;
         }
 
-        &:not(.touch) {
-            ::-webkit-scrollbar when (@scrollbar-dark-width = auto) {
-                // Note: If we do not set the width a default scrollbar is used in Chrome.
-                // And the custom colors set below do not work
-                width: 12px;
-            }
-            ::-webkit-scrollbar when (@scrollbar-dark-width = thin) {
-                width: 6px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background-color: @color-dark-scrollbar-track;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background-color: @color-dark-scrollbar-thumb;
-            }
+        ::-webkit-scrollbar when (@scrollbar-dark-width = auto) {
+            // Note: If we do not set the width a default scrollbar is used in Chrome.
+            // And the custom colors set below do not work
+            width: 12px;
         }
+        ::-webkit-scrollbar when (@scrollbar-dark-width = thin) {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: @color-dark-scrollbar-track;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: @color-dark-scrollbar-thumb;
+        }
+
     }
 
     body {
@@ -459,7 +458,11 @@ html.dark-mode {
 
     .floating-action-buttons a.button {
         box-shadow: none;
-        background: @color-dark-main;
+        background: @color-discord-btn-primary;
+
+        &:hover {
+            background: @color-discord-btn-primary-hover;
+        }
     }
 
     .custom-file-label,
